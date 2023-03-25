@@ -6,6 +6,7 @@ import java.util.ArrayList;
 public class House extends Building{
   private ArrayList<String> residents;
   private boolean hasDiningRoom;
+  
   public House(String name, String address, int nFloors, ArrayList<String> res, boolean dining) {
     super(name, address, nFloors);
     residents=res;
@@ -65,7 +66,6 @@ public boolean isResident(String person){
     System.out.println(Northrop.nResidents());
     Northrop.moveOut("bethany");
     System.out.println(Northrop.isResident("bethany"));
-
     System.out.println(Northrop.isResident("hazel"));
     System.out.println(Northrop.nResidents());
   }
