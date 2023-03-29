@@ -1,9 +1,13 @@
-/* This is a stub for the Cafe class */
+/** Cafe class
+@author bethany stephens
+*/
+
 public class Cafe extends Building{
     private int nCoffeeOunces; // The number of ounces of coffee remaining in inventory
     private int nSugarPackets; // The number of sugar packets remaining in inventory
     private int nCreams; // The number of "splashes" of cream remaining in inventory
     private int nCups; // The number of cups remaining in inventory
+    
     
     public Cafe(String name, String address, int nFloors, int coffee, int sugar, int cream, int cups) {
         super(name, address, nFloors);
@@ -14,6 +18,11 @@ public class Cafe extends Building{
         System.out.println("You have built a cafe: ☕");
     }
     
+    /**sell a coffee/ remove ingredients from inventory
+     * @param int ounces of coffee
+     * @param int number of sugar packets
+     * @param int number of splashes of cream
+    */
     public void sellCoffee(int size, int nSugarPackets, int nCreams){
         nCoffeeOunces-=size;
         this.nSugarPackets-=nSugarPackets;
@@ -23,6 +32,12 @@ public class Cafe extends Building{
             restock(100,100,100,10);
         }
     }
+    /**restock inventory
+     * @param int ounces of coffee
+     * @param int number of sugar packets
+     * @param int number of splashes of cream
+     * @param int number of cups
+    */
     private void restock(int nCoffeeOunces, int nSugarPackets, int nCreams, int nCups){
         this.nCoffeeOunces=nCoffeeOunces;
         this.nSugarPackets=nSugarPackets;
